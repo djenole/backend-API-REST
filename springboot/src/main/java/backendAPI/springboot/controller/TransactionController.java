@@ -35,10 +35,11 @@ public class TransactionController {
         transactionService.addTransaction(new Transaction(request.getValor(), request.getDataHora()));
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
-
+    
     @DeleteMapping
     public ResponseEntity<Void> clearTransactions() {
         transactionService.clearTransactions();
         return ResponseEntity.ok().build();
     }
+  
 }
